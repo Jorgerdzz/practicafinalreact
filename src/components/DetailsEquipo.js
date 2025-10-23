@@ -41,7 +41,7 @@ export default class DetailsEquipo extends Component {
                     <p className="card-text">{this.state.equipo.descripcion}</p>
                     <div className='row'>
                         <div className='col-6 d-grid'>
-                            <NavLink to="#" className="btn btn-success">Jugadores</NavLink>
+                            <NavLink to={"/jugadores/" + this.state.equipo.idEquipo} className="btn btn-success">Jugadores</NavLink>
                         </div>
                         <div className='col-6 d-grid'>
                             <NavLink to={"/"} className="btn btn-primary">Volver</NavLink>
