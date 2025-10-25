@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import Global from '../Global'
 import axios from 'axios';
+import logo from '../assets/images/champions.webp'
 
 export default class Menu extends Component {
 
@@ -26,8 +27,9 @@ export default class Menu extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg" style={{backgroundColor: "#e3f2fd"}}>
   <div className="container-fluid">
+    <img src={logo} style={{width:"80px", height:"70px"}}/>
     <NavLink className="navbar-brand" to="#">Champions</NavLink>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -38,7 +40,7 @@ export default class Menu extends Component {
           <NavLink className="nav-link active" aria-current="page" to={"/"}>Home</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="#">Apuestas</NavLink>
+          <NavLink className="nav-link" to={"/apuestas"}>Apuestas</NavLink>
         </li>
         <li className="nav-item dropdown">
           <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,7 +50,7 @@ export default class Menu extends Component {
             {
                 this.state.equipos.map((equipo, index)=>{
                     return(
-                        <li key={index}><NavLink to={"/details/" + equipo.idEquipo} className='dropdown-item'>{equipo.nombre}</NavLink></li>
+                        <li key={index}><NavLink to={"/detailsequipo/" + equipo.idEquipo} className='dropdown-item'>{equipo.nombre}</NavLink></li>
                     )
                 })
             }
@@ -57,7 +59,7 @@ export default class Menu extends Component {
       </ul>
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <button className="btn btn-outline-primary" type="submit">Search</button>
       </form>
     </div>
   </div>

@@ -34,8 +34,8 @@ export default class DetailsEquipo extends Component {
     return (
         <div className='row justify-content-center'>
             <h1 className='text-center'>{this.state.equipo.nombre}</h1>
-            <div className="card" style={{width: "30%"}}>
-                <img src={this.state.equipo.imagen} className="card-img-top" alt={this.state.equipo.nombre}></img>
+            <div className="card align-items-center" style={{width: "30%"}}>
+                <img src={this.state.equipo.imagen} className="card-img-top" alt={this.state.equipo.nombre} style={{width: "150px"}}></img>
                 <div className="card-body">
                     <h5 className="card-title">Champions: {this.state.equipo.champions}</h5>
                     <p className="card-text">{this.state.equipo.descripcion}</p>

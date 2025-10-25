@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import imagen from '../assets/images/OIP.webp'
+import imagen from '../assets/images/clasico.png'
 
 export default class Home extends Component {
   render() {

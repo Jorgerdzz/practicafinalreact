@@ -27,8 +27,11 @@ export default class Jugadores extends Component {
 
   render() {
     return (
-      <div style={{margin: "auto", width: "50%"}}>
-        <table>
+      <div style={{margin: "auto", width: "50%"}} className='align-items-center'>
+        <div className='d-flex justify-content-center'>
+            <NavLink to={"/jugadores/" + this.props.idequipo} className='btn btn-success'>Volver</NavLink>
+        </div>
+        <table className='table table-primary'>
             <thead>
                 <tr>
                     <th>NOMBRE</th>
@@ -42,9 +45,9 @@ export default class Jugadores extends Component {
                         return(
                             <tr>
                                 <td>{jugador.nombre}</td>
-                                <td><img src={jugador.imagen} style={{width: "70%"}}></img></td>
+                                <td><img src={jugador.imagen} style={{width: "30%"}}/></td>
                                 <td>
-                                    <NavLink className='btn btn-danger'></NavLink>
+                                    <NavLink to={"/detailsjugador/" + jugador.idJugador} className='btn btn-outline-danger'>Detalles</NavLink>
                                 </td>
                             </tr>
                         )
