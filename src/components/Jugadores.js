@@ -29,7 +29,7 @@ export default class Jugadores extends Component {
     return (
       <div style={{margin: "auto", width: "50%"}} className='align-items-center'>
         <div className='d-flex justify-content-center'>
-            <NavLink to={"/jugadores/" + this.props.idequipo} className='btn btn-success'>Volver</NavLink>
+            <NavLink to={"/detailsequipo/" + this.props.idequipo} className='btn btn-success'>Volver</NavLink>
         </div>
         <table className='table table-primary'>
             <thead>
